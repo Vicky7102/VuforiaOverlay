@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/camera_overlay_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <com.maryamaj.overlay.views.AreaOverlay
+        android:id="@+id/area_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.maryamaj.overlay.views.AreaOverlay>
+
+    <com.maryamaj.overlay.views.TextOverlay
+        android:id="@+id/text_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.maryamaj.overlay.views.AudioOverlay
+        android:id="@+id/audio_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.maryamaj.overlay.views.SketchOverlay
+        android:id="@+id/sketch_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.maryamaj.overlay.views.PDFOverlay
+        android:id="@+id/pdf_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <com.maryamaj.overlay.views.OverviewOverlay
+        android:id="@+id/overview_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.maryamaj.overlay.views.NavigationOverlay
+        android:id="@+id/navigation_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.maryamaj.overlay.views.InputOptionsOverlay
+        android:id="@+id/input_options_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.maryamaj.overlay.views.InputOptionsOverlay>
+
+    <com.maryamaj.overlay.views.SwitchModeOverlay
+        android:id="@+id/switch_mode_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.maryamaj.overlay.views.SwitchModeOverlay>
+
+    <com.maryamaj.overlay.views.FollowArrowOverlay
+        android:id="@+id/follow_arrow_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.maryamaj.overlay.views.FollowArrowOverlay>
+
+</RelativeLayout>

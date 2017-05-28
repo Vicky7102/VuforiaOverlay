@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.maryamaj.ubitile_marker"
+        minSdkVersion 17
+        targetSdkVersion 24
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi', 'armeabi-v7a'
+            universalApk false
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    compile files('libs/UHL.jar')
+    compile files('libs/Vuforia.jar')
+    //compile files('libs/android-support-v4.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'org.jacoco:org.jacoco.agent:0.7.5.201505241946'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'commons-io:commons-io:2.5'
+    compile 'com.birbit:android-priority-jobqueue:2.0.1'
+    compile files('libs/cla-20120716.jar')
+    compile project(':WheelViewLib')
+    compile 'com.android.support:design:25.1.0'
+}
